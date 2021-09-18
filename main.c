@@ -28,7 +28,7 @@ int main(int argc, char ** argv){
 
         switch (choice){
             case 1:
-                printf("\n\tEnter Data : ");
+                printf("\n\tEnter Element[int] of the Node : ");
                 data = input();
                 if (insertData(&lst, pushFront, pushEnd, data)){
                     printf("\n\n\t~~~ Successfully Inserted ~~~\n");
@@ -44,9 +44,9 @@ int main(int argc, char ** argv){
                 }
                 break;
             case 3:
-                printf("\n\tEnter Index: ");
+                printf("\n\tEnter Index of the Element: ");
                 index = input();
-                printf("\tEnter new Data: ");
+                printf("\tEnter Element[int] of the Node: ");
                 data = input();
 
                 if (updateData(&lst, index,data)){
@@ -59,12 +59,40 @@ int main(int argc, char ** argv){
                 printf("\n\n");
                 status(&lst);
                 break;
+            case 5:
+                if (isEmpty(&lst)){
+                    printf("\n\n\t~~~ List is Empty ~~~\n");
+                } else {
+                    printf("\n\n\t~~~ List is not Empty ~~~\n");
+                }
+                break;
+            case 6: 
+                printf("\n\tEnter Element[int] to search: ");
+                scanf("%d", &data);
+                if (linear_search(&lst,data)){
+                    printf("\n\n\t~~~ Element Found ~~~\n");
+                } else {
+                    printf("\n\n\t~~~ Element not Found ~~~\n");
+                }
+                break;
+            case 7:
+                if(reverse(&lst)){
+                    printf("\n\n\t~~~ List is Reversed ~~~\n");
+                } else{
+                    printf("\n\n\t~~~ Unable to Reverse List ~~~\n");
+                }
+                break;
+            default:
+                isQuit();
+                return 1;
+
         }
-        printf("\n\nPress q to quit ");
+        printf("\n\n\tPress q to quit else press any: ");
         quit = getch();
         if (quit == 'q' || quit =='Q') break;
     }
     deleteList(&lst);
+    isQuit();
 
     return 0;
 }

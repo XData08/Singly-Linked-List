@@ -1,18 +1,18 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Makefile
 
-all: main
+SOURCE := main
+DEPENDENDCIES := main.o text.o linkedlist.o
 
-text.o : text.c linkedlist.h
-	gcc -c $^
+OBJECT_CMD := gcc -c 
+COMPILE_CMD := gcc -o
 
-linkedlist.o : linkedlist.c linkedlist.h
-	gcc -c $^
+all: ${SOURCE}
 
-main.o : main.c linkedlist.h
-	gcc -c $^
+${SOURCE} : ${DEPENDENDCIES}
+	${COMPILE_CMD} $@ $^
 
-main: main.o linkedlist.o text.o
-	gcc -o $@  $^ 
+%.o : %.c linkedlist.h
+	${OBJECT_CMD} $<
 
 clean : 
-	del *.o *.exe *.gch
+	del *.o  *.exe *.gch

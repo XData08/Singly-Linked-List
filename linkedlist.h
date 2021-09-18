@@ -62,5 +62,7 @@ void deleteList(SLList * lst);
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~ text.c Methods[Declaration]
 void main_menu(void);
+void isQuit(void);
 
 #endif
+

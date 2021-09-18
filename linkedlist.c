@@ -57,7 +57,7 @@ bool pushMiddle(SLList * lst, int data){
             return false;
         } else {
             front = getNode(lst->head, ((lst->size-1)/2));
-            back = getNode(front, 1);
+            back = front->next;
 
             front->next = newNode;
             newNode->next = back;
@@ -105,8 +105,8 @@ bool popMiddle(SLList * lst){
     } else {
         Node * front, * back, * toDel;
         front = getNode(lst->head, ((lst->size-1)/2));
-        toDel = getNode(front, 1);
-        back = getNode(toDel, 1);
+        toDel = front->next;
+        back = toDel->next;
 
         front->next = back;
         free(toDel);
