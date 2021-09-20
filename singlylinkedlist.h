@@ -1,6 +1,6 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ linkedlist.h
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H 
+#ifndef SINGLYLINKEDLIST_H
+#define SINGLYLINKEDLIST_H 
 #define STRING_SIZE 256
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Libraries 
