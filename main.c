@@ -8,7 +8,7 @@
  */
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main.c 
-#include "linkedlist.h"
+#include "singlylinkedlist.h"
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ main methods [Declaration]

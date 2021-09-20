@@ -1,6 +1,5 @@
 # <b> Singly Linked List</b> 
-###### Devloped by [Lirae Data](https://www.facebook.com/liraeque.data/)
-<br>
+#### Devloped by _[Lirae Que Data](https://www.facebook.com/liraeque.data/)_
 
 A singly linked list is well known and used Data Structure amongst programmers and it is sometimes known as a linear linked list because all nodes are linked together in a sequential ways and others may call it as a dynamic array because the change of size is dynamically allocated everytime a node is added to the list. As a result, it obviously has a beginning or _Head_ and an end or _Tail_. The fundamental issue with this list is that we are unable to access the node's predecessor from the present node.
 
@@ -77,7 +76,7 @@ I've designed my code as a beginner friendly because the is rather simple yet ca
     - To reverse the contents of the linked list
 
 ---
-## Sample Code Snippet of a Singly Linked List
+## Structure of a Singly Linked List
 ```
 typedef struct node {
     struct node * next;
@@ -91,4 +90,8 @@ typdef struct sllist {
 } SLList;
 ```
 
-The code above is what I used in creating my Singly linked list in C language.
+The code above is what I used in creating my Singly linked list in C language. It composts of 2 structs which is the _Node_ and _SLList_.
+
+The _Node_ struct is the container for the data[int] inputted from the user. Meanwhile the _SLList_ is the linkage between node and it also the container of the _head_ and _tail_ nodes.
+
+---
