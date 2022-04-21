@@ -1,7 +1,6 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Makefile
-
 SOURCE := main
-DEPENDENDCIES := main.o text.o singlylinkedlist.o
+DEPENDENDCIES := main.o singlylinkedlist.o text.o 
 
 OBJECT_CMD := gcc -c 
 COMPILE_CMD := gcc -o
